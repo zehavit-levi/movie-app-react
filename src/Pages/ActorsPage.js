@@ -1,9 +1,20 @@
-function ActorsPage(){
-    const [actors, setActors] = React.useState();
-    const [filterText, setFiltaerTexe] = React.useState();
-    const [sortBy, setSortBy] = React.useState();
-    return(
-        <div></div>
+import { useState } from "react";
+import { Container } from "react-bootstrap";
+import ActorCard from "../component/ActorCard";
+
+
+function ActorsPage() {
+    const [actors, setActors] = useState();
+    const [filterText, setFiltaerTexe] = useState();
+    const [sortBy, setSortBy] = useState();
+    
+    
+    const actorsCards = [];
+    actorsCards.push(<ActorCard actor={actors[0]}></ActorCard>)
+    return (
+        <Container>
+          {actorsCards}
+        </Container>
     );
 }
 
