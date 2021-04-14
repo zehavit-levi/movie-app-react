@@ -8,7 +8,9 @@ function ActorsPage() {
     const [filterText, setFiltaerTexe] = useState();
     const [sortBy, setSortBy] = useState();
     
-    
+    const [actors,setActors] = useState(null);
+  let actor1 = new Actor("Julia","Roberts ",'28-10-1967',julia );
+  setActors(actors.concat(actor1));
     const actorsCards = [];
     actorsCards.push(<ActorCard actor={actors[0]}></ActorCard>)
     return (
