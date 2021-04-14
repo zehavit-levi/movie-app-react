@@ -21,12 +21,12 @@ function ActorsPage() {
       <Form className="row">
         <Form.Control className="col-8" onChange={(e) => setFilterText(e.target.value)}></Form.Control>
         <Form.Control value={sortBy}as="select" className="col-4" onChange={(e) => setSortBy(e.target.value)}>
-          <option value="0">First Name</option>
-          <option value="1">Last Name</option>
-          <option value="2">Age</option>
+          <option value="firstName">First Name</option>
+          <option value="lastName">Last Name</option>
+          <option value="age">Age</option>
         </Form.Control>
       </Form>
-      <ActorsCards actors={filterText.length > 0 ?actors.filter((actor) => actor["firstName"].toLowerCase().includes(filterText)|| actor["lastName"].toLowerCase().includes(filterText)): actors}></ActorsCards>
+      <ActorsCards actors={(filterText.length > 0 ?actors.filter((actor) => actor["firstName"].toLowerCase().includes(filterText)|| actor["lastName"].toLowerCase().includes(filterText)): actors).sort((a,b) => b[sortBy] - a[sortBy])}></ActorsCards>
     </Container>
   );
 }
