@@ -1,0 +1,13 @@
+.actor-card{
+    padding: 10px;
+    background-image: -webkit-linear-gradient(rgb(228, 228, 241), rgb(132, 132, 243), pink, purple);
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+}
+.card-container{
+    padding: 10px;
+}
