@@ -22,7 +22,10 @@ function ActorsPage() {
     <Container>
       <Form className="row header-actor-page">
         <div className="filter-container col-md-8 col-12">
-          <Form.Control className="actor-filter" onChange={(e) => setFilterText(e.target.value)} placeholder="Tap your filter"></Form.Control>
+          <Form.Control className="actor-filter" onChange={(e) =>{
+            let val = e.target.value.toLowerCase();
+            setFilterText(val);
+          }} placeholder="Tap your filter"></Form.Control>
         </div>
         <div className="select-container col-md-4 col-12">
           <Form.Control value={sortBy} as="select" onChange={(e) => setSortBy(e.target.value)}>
