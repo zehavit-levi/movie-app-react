@@ -20,8 +20,8 @@ function ActorsPage() {
   return (
     <Container>
       <Form className="row">
-        <Form.Control className="col-8" onChange={(e) => setFilterText(e.target.value)}></Form.Control>
-        <Form.Control value={sortBy} as="select" className="col-4" onChange={(e) => setSortBy(e.target.value)}>
+        <Form.Control className="col-md-8 col-12" onChange={(e) => setFilterText(e.target.value)}></Form.Control>
+        <Form.Control value={sortBy} as="select" className="col-md-4 col-12" onChange={(e) => setSortBy(e.target.value)}>
           <option value="firstName">First Name</option>
           <option value="lastName">Last Name</option>
           <option value="age">Age</option>
