@@ -1,0 +1,58 @@
+[
+    {
+        "fname": "Julia",
+        "lname": "Roberts",
+        "bdate": "28-10-1967",
+        "img": "https://m.media-amazon.com/images/M/MV5BMTQzNjU3MDczN15BMl5BanBnXkFtZTYwNzY2Njc4._V1_UX214_CR0,0,214,317_AL_.jpg",
+        "imdbLink": "https://www.imdb.com/name/nm0000210/?ref_=nv_sr_srsg_0"
+    },
+    {
+        "fname": "Brad",
+        "lname": "Pitt",
+        "bdate": "18-12-1963",
+        "img": "https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg",
+        "imdbLink": "https://www.imdb.com/name/nm0000093/?ref_=nv_sr_srsg_0"
+    },
+    {
+        "fname":"Yehuda",
+        "lname":"Levi",
+        "bdate":"29-06-1979",
+        "img":"https://m.media-amazon.com/images/M/MV5BMTY0MDk3MDg1Nl5BMl5BanBnXkFtZTYwMTU5ODc3._V1_UX214_CR0,0,214,317_AL_.jpg",
+        "imdbLink": "https://www.imdb.com/name/nm1106990/?ref_=nv_sr_srsg_0"
+    },
+    {
+        "fname":"Sendi",
+        "lname":"Bar",
+        "bdate":"05-04-1976",
+        "img":"https://m.media-amazon.com/images/M/MV5BMmVhOTY4NjctZGQ0YS00MzQ4LWFmMGYtYTNiYjBmNzY4MmQ0XkEyXkFqcGdeQXVyMjMyMzI4MzY@._V1_UY317_CR33,0,214,317_AL_.jpg",
+        "imdbLink":"https://www.imdb.com/name/nm1139378/?ref_=nv_sr_srsg_0"
+    },
+    {
+        "fname":"Bar",
+        "lname":"Refaeli",
+        "bdate":"04-06-1985",
+        "img":"https://m.media-amazon.com/images/M/MV5BMTY5MjYwMzY5NV5BMl5BanBnXkFtZTcwOTM3MDAzNQ@@._V1_UX214_CR0,0,214,317_AL_.jpg",
+        "imdbLink":"https://www.imdb.com/name/nm2064685/?ref_=nv_sr_srsg_0"
+    },
+    {
+        "fname":"Jennifer",
+        "lname":"Lopez",
+        "bdate":"24-07-1969",
+        "img":"https://m.media-amazon.com/images/M/MV5BMTY0OTY3ODA3OV5BMl5BanBnXkFtZTcwMzMyMzQ1NQ@@._V1_UY317_CR32,0,214,317_AL_.jpg",
+        "imdbLink":"https://www.imdb.com/name/nm0000182/?ref_=nv_sr_srsg_3"
+    },
+    {
+        "fname":"Tom",
+        "lname":"Ellis",
+        "bdate":"17-11-1978",
+        "img":"https://m.media-amazon.com/images/M/MV5BYmY2OGMzM2YtMDVlNi00NzdhLTkzNDMtZjA0M2I2YzNiNDIyXkEyXkFqcGdeQXVyNjc1OTk0NzA@._V1_UY317_CR17,0,214,317_AL_.jpg",
+        "imdbLink":"https://www.imdb.com/name/nm0255124/?ref_=nv_sr_srsg_0"
+    },
+    {
+        "fname":"Yuval",
+        "lname":"Scharf",
+        "bdate":"04-06-1985",
+        "img":"https://m.media-amazon.com/images/M/MV5BZTgxMDQyN2YtODg4Ni00OTg4LTg0NTktYmM3ZTBmYTIwOGU0XkEyXkFqcGdeQXVyMjMyMzI4MzY@._V1_UY317_CR102,0,214,317_AL_.jpg",
+        "imdbLink":"https://www.imdb.com/name/nm2965644/?ref_=nv_sr_srsg_0"
+    }
+]
