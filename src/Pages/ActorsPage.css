@@ -5,6 +5,10 @@
 .header-actor-page{
     margin-top: 10px;
 }
-.filter-container{
+.filter-container .col-md-8{
     padding-right: 10px;
+}
+
+.filter-container.col-12{
+    padding-bottom: 10px;
 }
