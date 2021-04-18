@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Container, Form } from "react-bootstrap";
 import ActorsCards from "../component/ActorsCards";
 import ActorModel from "../model/ActorModel";
+import "./ActorsPage.css";
 
 
 function ActorsPage() {
@@ -16,18 +17,22 @@ function ActorsPage() {
     });
   }, []);
 
-  
+
   return (
     <Container>
-      <Form className="row">
-        <Form.Control className="col-md-8 col-12" onChange={(e) => setFilterText(e.target.value)}></Form.Control>
-        <Form.Control value={sortBy} as="select" className="col-md-4 col-12" onChange={(e) => setSortBy(e.target.value)}>
-          <option value="firstName">First Name</option>
-          <option value="lastName">Last Name</option>
-          <option value="age">Age</option>
-        </Form.Control>
+      <Form className="row header-actor-page">
+        <div className="filter-container col-md-8 col-12">
+          <Form.Control className="actor-filter" onChange={(e) => setFilterText(e.target.value)} placeholder="Tap your filter"></Form.Control>
+        </div>
+        <div className="select-container col-md-4 col-12">
+          <Form.Control value={sortBy} as="select" onChange={(e) => setSortBy(e.target.value)}>
+            <option value="firstName">First Name</option>
+            <option value="lastName">Last Name</option>
+            <option value="age">Age</option>
+          </Form.Control>
+        </div>
       </Form>
-      <ActorsCards actors={actors} filterBy = {filterText} sortBy = {sortBy} ></ActorsCards>
+      <ActorsCards actors={actors} filterBy={filterText} sortBy={sortBy} ></ActorsCards>
     </Container>
   );
 }

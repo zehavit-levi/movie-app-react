@@ -1,0 +1,10 @@
+.container{
+    font-family: 'Lobster', cursive;
+    background-image: -webkit-linear-gradient(white, rgb(241, 223, 226), white);
+}
+.header-actor-page{
+    margin-top: 10px;
+}
+.filter-container{
+    padding-right: 10px;
+}
