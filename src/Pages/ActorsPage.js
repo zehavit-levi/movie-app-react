@@ -1,28 +1,33 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Container, Form } from "react-bootstrap";
+import { Container, Form, Spinner } from "react-bootstrap";
 import ActorsCards from "../component/ActorsCards";
 import ActorModel from "../model/ActorModel";
 import "./ActorsPage.css";
+// import actorsJson from "../data/actors.json"
 
 
 function ActorsPage() {
-  const [actors, setActors] = useState(null);
+  // const [actors, setActors] = useState(actorsJson.map(plainActor => new ActorModel(plainActor)));
   const [filterText, setFilterText] = useState("");
   const [sortBy, setSortBy] = useState("firstName");
+  const [actors, setActors] = useState(null);
   useEffect(() => {
-    axios.get("actors.json").then(res => {
+    console.log("actors json");
+    const pathPre = process.env.PUBLIC_URL;
+    axios.get(pathPre.concat("/actors.json")).then(res => {
       const newActors = res.data.map(plainActor => new ActorModel(plainActor));
       setActors(newActors);
     });
   }, []);
 
 
+
   return (
-    <Container>
+    <Container className="actor-page">
       <Form className="row header-actor-page">
         <div className="filter-container col-md-8 col-12">
-          <Form.Control className="actor-filter" onChange={(e) =>{
+          <Form.Control className="actor-filter" value={filterText} onChange={(e) =>{
             let val = e.target.value.toLowerCase();
             setFilterText(val);
           }} placeholder="Tap your filter"></Form.Control>
@@ -35,7 +40,9 @@ function ActorsPage() {
           </Form.Control>
         </div>
       </Form>
-      <ActorsCards actors={actors} filterBy={filterText} sortBy={sortBy} ></ActorsCards>
+    {actors ?
+      <ActorsCards actors={actors} filterBy={filterText} sortBy={sortBy} ></ActorsCards> : 
+      <Spinner className="spinner-border"/>}
     </Container>
   );
 }
