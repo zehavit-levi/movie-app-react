@@ -1,4 +1,4 @@
-import ActorCard from "./ActorCard";
+import ActorCard from "./ActorCard/ActorCard";
 
 export default function ActorsCards(props) {
     let actorsCards;
