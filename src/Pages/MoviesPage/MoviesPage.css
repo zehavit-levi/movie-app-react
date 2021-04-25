@@ -1,0 +1,7 @@
+.movie-page{
+    font-family: 'Lobster', cursive;
+    background-image: -webkit-linear-gradient(white, rgb(241, 223, 226), white);
+}
+.header-movie-page{
+    margin-top: 10px;
+}
