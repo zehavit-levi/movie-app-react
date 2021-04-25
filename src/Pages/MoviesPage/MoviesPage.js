@@ -9,7 +9,6 @@ export default function MoviesPage() {
     const [movies, setMovies] = useState([]);
     const [searchText, setSearchText] = useState("");
     const [results, setResults] = useState([]);
-    const [newMovie,setNewMovie] =useState();
     function handleSearchChange(newSearchText) {
         setSearchText(newSearchText);
 
@@ -23,31 +22,22 @@ export default function MoviesPage() {
         }
     }
 
-    // "https://api.themoviedb.org/3/movie/" + result.id + "?api_key=80aa9e53b86dd9697f92df8248cf222d&language=en-US"
-
-    
-
-  
-
     function addMovie(resultIndex) {
         // Adding the movie to the view
-        const searchURL = "https://api.themoviedb.org/3/movie/" + results[resultIndex].id + "?api_key=80aa9e53b86dd9697f92df8248cf222d&language=en-US"
-        axios.get(searchURL).then(response => {
-            setNewMovie(response.data);
+        const promise1 = axios.get("https://api.themoviedb.org/3/movie/" + results[resultIndex].id + "?api_key=80aa9e53b86dd9697f92df8248cf222d&language=en-US");
+        const promise2 = axios.get("https://api.themoviedb.org/3/movie/" + results[resultIndex].id + "/credits?api_key=80aa9e53b86dd9697f92df8248cf222d&language=en-US");
+        
+        Promise.all([promise1,promise2]).then(responses => {
+            const directors = responses[1].data.crew.filter(person => person.department === "Directing");
+            const mainStars = responses[1].data.cast.filter(person => person.cast_id <= 5);
+            const newMovie = new MovieModel(responses[0].data.title, responses[0].data.runtime, responses[0].data.poster_path, directors.map(director => director.name), mainStars.map(star => star.name));
+            setMovies(movies.concat(newMovie));
         });
+      
      
         setResults([]);
         setSearchText("");
     }
-
-    useEffect(()=>{
-        if(newMovie){
-            console.log(newMovie);
-            setMovies(movies.concat(new MovieModel(newMovie.title, newMovie.runtime)));
-            setNewMovie();
-            }
-    },[newMovie, movies])
-
     return (
         <Container>
             <SearchBox placeholder="Enter movie for search..." searchText={searchText} onSearchChange={handleSearchChange} results={results.map(result => result.title)} onResultSelected={addMovie} />
