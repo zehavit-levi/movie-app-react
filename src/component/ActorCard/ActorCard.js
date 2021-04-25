@@ -1,8 +1,6 @@
 import { Card } from "react-bootstrap"
 import "./ActorCard.css"
 function ActorCard({ actor }) {
-    console.log(actor["image"]);
-
 
     return (
         <div className="card-container col-sm-6 col-md-4 col-lg-3" >

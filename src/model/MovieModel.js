@@ -8,7 +8,6 @@ export default class MovieModel {
             this.stars = plainMovie.stars;
         }
         else {
-            console.log("parameters")
             this.movieName = plainMovie;
             this.timeout = timeout;
             this.poster = "https://image.tmdb.org/t/p/w500" + poster;

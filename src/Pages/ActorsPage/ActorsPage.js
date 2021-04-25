@@ -13,7 +13,6 @@ function ActorsPage() {
   const [sortBy, setSortBy] = useState("firstName");
   const [actors, setActors] = useState(null);
   useEffect(() => {
-    console.log("actors json");
     const pathPre = process.env.PUBLIC_URL;
     axios.get(pathPre.concat("/actors.json")).then(res => {
       const newActors = res.data.map(plainActor => new ActorModel(plainActor));

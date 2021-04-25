@@ -1,5 +1,5 @@
 import axios from "axios";
-import {  useEffect, useState } from "react";
+import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import MovieCard from "../../component/MovieCard/MovieCard";
 import SearchBox from "../../component/SearchBox/SearchBox";
@@ -42,7 +42,7 @@ export default function MoviesPage() {
         <Container>
             <SearchBox placeholder="Enter movie for search..." searchText={searchText} onSearchChange={handleSearchChange} results={results.map(result => result.title)} onResultSelected={addMovie} />
             <Row>
-                    {movies.map(movie => <Col lg={3} md={6}><MovieCard movie={movie}/></Col>)}
+                    {movies.map((movie,index) => <Col key={index} lg={3} md={6}><MovieCard key={index} movie={movie}/></Col>)}
                 </Row>
         </Container>
     )

@@ -16,8 +16,6 @@ export default class ActorModel {
             this.imdbLink = imdbLink;
             this.age = this.CalcAge();
         }
-
-        console.log(this.image);
     }
 
     CalcAge = () => {
