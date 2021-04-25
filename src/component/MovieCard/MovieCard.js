@@ -7,8 +7,8 @@ export default function MovieCard({ movie }) {
 
 
     return (
-        <div className="c-actor">
-            <Card>
+        <div className="movie-card-container">
+            <Card className="movie-card">
                 <Card.Img variant="top" src={movie.poster} />
                 <Card.Body>
                     <Card.Title>{movie.movieName}</Card.Title>
