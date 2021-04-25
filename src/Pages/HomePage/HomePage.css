@@ -1,0 +1,30 @@
+.homepage-page{
+        font-family: 'Lobster', cursive;
+        background-image: -webkit-linear-gradient(white, rgb(241, 223, 226), white);
+        text-align: center;
+        height: 600px;
+}
+
+.homepage-page>h1{
+    font-size: 4em;
+    color: rgb(68, 11, 121);
+    padding: 10px;
+}
+
+.homepage-page>h2{
+    font-size: 3.5em;
+    color: rgb(90, 47, 131);
+    padding: 20px;
+}
+
+.homepage-page>h3{
+    font-size: 3em;
+    color: rgb(101, 69, 131);
+    padding: 20px;
+}
+.homepage-page>h4{
+    font-size: 2.5em;
+    color: rgb(118, 102, 133);
+    padding: 20px;
+}
+
