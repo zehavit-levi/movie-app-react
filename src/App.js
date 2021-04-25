@@ -4,11 +4,11 @@ import HomePage from './pages/HomePage/HomePage';
 import Switch from 'react-bootstrap/esm/Switch';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { HashRouter, Route } from 'react-router-dom';
-
+import './App.css'
 function App() {
   return (
     <Container>
-      <Navbar>
+      <Navbar className="navbar-container">
         <Navbar.Brand href="#/">Home Page</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="#/movies">movies</Nav.Link>
