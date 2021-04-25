@@ -4,11 +4,9 @@ import { Container, Form, Spinner } from "react-bootstrap";
 import ActorsCards from "../../component/ActorsCards";
 import ActorModel from "../../model/ActorModel";
 import "./ActorsPage.css";
-// import actorsJson from "../data/actors.json"
 
 
 function ActorsPage() {
-  // const [actors, setActors] = useState(actorsJson.map(plainActor => new ActorModel(plainActor)));
   const [filterText, setFilterText] = useState("");
   const [sortBy, setSortBy] = useState("firstName");
   const [actors, setActors] = useState(null);
